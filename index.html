@@ -1,67 +1,175 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CAP Garland, LLC</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f0f0f0;
-      color: #333;
-    }
-    header {
-      background-color: #003366;
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-    }
-    section {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    h1, h2 {
-      color: #003366;
-    }
-    .contact {
-      background: #fff;
-      padding: 20px;
-      border-left: 5px solid #003366;
-      margin-top: 30px;
-    }
-    footer {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 50px;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>RP‑SLX Group LLC — Farmer • San Jose, CA</title>
+<meta name="description" content="RP‑SLX Group LLC • Local farmer on Ora St, San Jose, CA 95129. Fresh produce, sustainable practices, and farm services.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#16a34a;   /* primary green */
+    --forest:#065f46;  /* deep green */
+    --red:#dc2626;     /* accent red */
+    --ink:#111827;     /* text */
+    --paper:#f3f4f6;   /* background */
+    --white:#ffffff;   /* cards */
+    --line:#e5e7eb;    /* borders */
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:Inter,system-ui,Arial,Helvetica,sans-serif;background:var(--paper);color:var(--ink)}
+  a{color:var(--forest);text-decoration:none}
+
+  header{background:linear-gradient(120deg,#064e3b,#065f46);color:#fff;text-align:center;padding:34px 16px;border-bottom:6px solid var(--green)}
+  header h1{margin:0;font-size:2.2rem}
+  header p{margin:8px 0 0;opacity:.95}
+
+  nav{background:#064e3b;text-align:center;padding:12px;position:sticky;top:0;z-index:10}
+  nav a{color:#fff;margin:0 14px;font-weight:800}
+  nav a:hover{color:var(--red)}
+
+  .hero{max-width:1100px;margin:24px auto;display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center;padding:0 14px}
+  .hero img{width:100%;border-radius:14px;border:4px solid var(--green);object-fit:cover;animation:pulse 3s ease-in-out infinite}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(22,163,74,0)}50%{box-shadow:0 0 0 16px rgba(22,163,74,.15)}}
+  .hero .text{background:var(--white);border:1px solid var(--line);border-left:6px solid var(--forest);border-radius:14px;padding:18px}
+  .tag{display:inline-block;background:#dcfce7;border:1px solid #bbf7d0;color:#065f46;border-radius:999px;padding:6px 12px;margin:6px 6px 0 0;font-size:.9rem}
+
+  .section{max-width:1100px;margin:22px auto;background:var(--white);padding:22px;border-radius:12px;border:1px solid var(--line);box-shadow:0 6px 18px rgba(0,0,0,.06)}
+  .section h2{margin:0 0 12px;color:#0b1220}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+
+  .card{background:#fbfbfb;border:1px solid var(--line);border-left:6px solid var(--green);border-radius:10px;padding:12px}
+  .notice{display:flex;align-items:center;gap:10px;background:#fef2f2;border:1px dashed #fecaca;border-left:6px solid var(--red);border-radius:10px;padding:12px;color:#7f1d1d}
+
+  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:14px}
+  .gallery img{width:100%;border-radius:10px;border:2px solid var(--green);object-fit:cover;aspect-ratio:4/3;transition:.25s}
+  .gallery img:hover{transform:scale(1.03)}
+
+  .cta{margin-top:12px;display:flex;gap:12px;flex-wrap:wrap}
+  .btn{background:var(--green);color:#fff;padding:12px 16px;border-radius:10px;font-weight:800}
+  .btn.secondary{background:#fff;color:var(--ink);border:2px solid var(--ink)}
+
+  footer{background:#064e3b;color:#fff;text-align:center;padding:18px;margin-top:26px;border-top:6px solid var(--green)}
+
+  /* Floating buttons */
+  .bar{position:fixed;left:0;right:0;bottom:0;background:#ffffffd9;backdrop-filter:blur(6px);display:flex;gap:10px;justify-content:center;padding:10px;border-top:2px solid var(--green);z-index:999}
+  .bar a{background:#064e3b;color:#fff;padding:10px 14px;border-radius:999px;font-weight:800}
+  .bar a:nth-child(2){background:var(--red)}
+  @media(min-width:820px){.bar{display:none}}
+  @media(max-width:900px){.hero{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-  <header>
-    <h1>CAP Garland, LLC</h1>
-    <p>Private Investment Fund</p>
-  </header>
 
-  <section>
-    <h2>About Us</h2>
-    <p>CAP Garland, LLC is a Washington-based private investment fund focused on delivering value through diversified investment strategies.</p>
+<header>
+  <h1>RP‑SLX Group LLC</h1>
+  <p>Local Farmer • Ora St, San Jose, CA 95129, United States</p>
+</header>
 
-    <h2>Contact</h2>
-    <div class="contact">
-      <p><strong>Address:</strong> 915 W 2nd Ave, Spokane, WA 99201</p>
-      <p><strong>Email:</strong> <a href="mailto:ryanberg@capgarland.shop">ryanberg@capgarland.shop</a></p>
-      <p><strong>Phone:</strong> (509) 822-3850</p>
+<nav>
+  <a href="#about">About</a>
+  <a href="#produce">Produce</a>
+  <a href="#services">Services</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="https://cdn.freshfruitportal.com/2019/12/22c37a02-foto-agricultor.jpg" alt="Farmer in field">
+  <div class="text">
+    <h2>Fresh fields. Honest harvests.</h2>
+    <p>We grow and source seasonal produce with sustainable practices. From farm to table, we keep it fresh, local, and fair.</p>
+    <div>
+      <span class="tag">🥬 Seasonal Greens</span>
+      <span class="tag">🍓 Fruits</span>
+      <span class="tag">🚚 Local Delivery</span>
     </div>
-  </section>
+    <div class="cta">
+      <a class="btn" href="tel:+19808606080">Call: +1 (980) 860‑6080</a>
+      <a class="btn secondary" href="mailto:support@fenvoria.shop">Email: support@fenvoria.shop</a>
+    </div>
+  </div>
+</section>
 
-  <footer>
-    &copy; 2025 CAP Garland, LLC. All rights reserved.
-  </footer>
+<!-- ABOUT -->
+<section id="about" class="section">
+  <h2>About Us</h2>
+  <p><strong>RP‑SLX Group LLC</strong> is a family‑run farm operation serving the San Jose community. We prioritize soil health, water stewardship, and fair partnerships with local markets.</p>
+  <p><strong>Address:</strong> Ora St, San Jose, CA 95129, United States • <strong>Email:</strong> <a href="mailto:support@fenvoria.shop">support@fenvoria.shop</a> • <strong>Phone:</strong> <a href="tel:+19808606080">+1 (980) 860‑6080</a></p>
+  <div class="notice" role="status">🔔 <b>Note:</b> Limited shares available during peak season. Reserve early!</div>
+</section>
+
+<!-- PRODUCE -->
+<section id="produce" class="section">
+  <h2>Seasonal Produce</h2>
+  <div class="grid">
+    <div class="card"><strong>Leafy Greens</strong><br/>Kale, chard, lettuces. Harvested weekly.</div>
+    <div class="card"><strong>Root Veg</strong><br/>Carrots, beets, radishes. Crisp and sweet.</div>
+    <div class="card"><strong>Fruits</strong><br/>Strawberries, berries, seasonal orchard picks.</div>
+    <div class="card"><strong>Herbs</strong><br/>Basil, cilantro, mint — aromatic and fresh.</div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+  <h2>Our Services</h2>
+  <div class="grid">
+    <div class="card"><strong>CSA Boxes</strong><br/>Weekly farm boxes with rotating selections.</div>
+    <div class="card"><strong>Wholesale</strong><br/>Supply for restaurants and small groceries.</div>
+    <div class="card"><strong>Farm Visits</strong><br/>By appointment: tours & education.</div>
+    <div class="card"><strong>Delivery</strong><br/>Local drop‑offs within greater San Jose.</div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="section">
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <img src="https://avatars.mds.yandex.net/i?id=434d77e784032b21bd422791251b16bbf0bcbd6c-5859873-images-thumbs&n=13" alt="Fresh lettuce heads">
+    <img src="https://avatars.mds.yandex.net/i?id=1969600bbebf8d868942743373c67c47aaa2a277-3850454-images-thumbs&n=13" alt="Row crops at sunrise">
+    <img src="https://cdn.freshfruitportal.com/2019/12/22c37a02-foto-agricultor.jpg" alt="Farmer harvesting">
+    <img src="https://elementra.ru/wp-content/uploads/2023/01/service-single-06.jpg" alt="Irrigation and farm equipment">
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <div class="grid">
+    <div>
+      <p>📧 <strong>Email:</strong> <a href="mailto:support@fenvoria.shop">support@fenvoria.shop</a></p>
+      <p>📞 <strong>Phone:</strong> <a href="tel:+19808606080">+1 (980) 860‑6080</a></p>
+      <p>📍 <strong>Address:</strong> Ora St, San Jose, CA 95129, United States</p>
+    </div>
+    <div>
+      <p><em>Hours</em></p>
+      <ul>
+        <li>Mon–Fri: 8:00 – 17:00</li>
+        <li>Sat: 9:00 – 14:00</li>
+        <li>Sun: Closed</li>
+      </ul>
+    </div>
+  </div>
+  <div class="cta">
+    <a class="btn" href="#produce">See Produce</a>
+    <a class="btn secondary" href="#services">Our Services</a>
+  </div>
+</section>
+
+<!-- MOBILE BAR -->
+<div class="bar">
+  <a href="tel:+19808606080">Call</a>
+  <a href="mailto:support@fenvoria.shop">Email</a>
+  <a href="#produce">Produce</a>
+</div>
+
+<footer>
+  <p>&copy; 2025 RP‑SLX Group LLC — San Jose, CA</p>
+</footer>
+
 </body>
 </html>
